@@ -1,0 +1,994 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   WARNA UTAMA
+========================================================= */
+
+:root {
+    --bg: #c97891;
+    --bg-dark: #b96882;
+    --bg-light: #d88ca2;
+
+    --wine: #741936;
+    --burgundy: #9d2e50;
+    --rose: #d75b7c;
+
+    --pink: #efa1b6;
+    --pink-soft: #f5c2cf;
+
+    --white: #fff8fa;
+    --cream: #fff3f6;
+
+    --ink: #592334;
+    --text-soft: #713b4d;
+}
+
+
+/* =========================================================
+   HTML & BODY
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    overflow-x: hidden;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* =========================================================
+   BACKGROUND AMBIENT
+========================================================= */
+
+.ambient {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(85px);
+    pointer-events: none;
+    z-index: -2;
+}
+
+.ambient-1 {
+    width: 430px;
+    height: 430px;
+    top: -170px;
+    left: -140px;
+    background: #e89bb0;
+    opacity: 0.32;
+}
+
+.ambient-2 {
+    width: 500px;
+    height: 500px;
+    right: -240px;
+    bottom: 5%;
+    background: #9f4964;
+    opacity: 0.22;
+}
+
+
+/* =========================================================
+   PARTICLES / HATI MELAYANG
+========================================================= */
+
+#particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    bottom: -30px;
+    color: #ef9ab1;
+    opacity: 0.55;
+    animation: rise linear forwards;
+}
+
+@keyframes rise {
+    to {
+        transform:
+            translateY(-110vh)
+            rotate(180deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   MUSIC BUTTON
+========================================================= */
+
+.music-btn {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    background: rgba(116, 25, 54, 0.78);
+
+    backdrop-filter: blur(12px);
+
+    color: #fff;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 30;
+
+    transition: 0.3s;
+}
+
+.music-btn:hover {
+    transform: scale(1.08);
+    background: var(--wine);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 35px 20px;
+
+    display: grid;
+    place-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #d88aa0 0%,
+            #c97891 45%,
+            #b96781 100%
+        );
+
+    color: #fff;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255, 255, 255, 0.12),
+            transparent 40%
+        );
+
+    pointer-events: none;
+}
+
+.hero-card {
+    position: relative;
+    max-width: 680px;
+    padding: 50px 25px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   LABEL KECIL
+========================================================= */
+
+.tiny-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #ffe2ea;
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+   HEART HERO
+========================================================= */
+
+.hero-heart {
+    margin: 28px 0 5px;
+
+    font-size: 58px;
+
+    color: #f8a7bb;
+
+    text-shadow:
+        0 10px 30px rgba(116, 25, 54, 0.3);
+
+    animation: pulse 1.7s infinite;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.13);
+    }
+}
+
+
+/* =========================================================
+   JUDUL
+========================================================= */
+
+h1,
+h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    line-height: 0.88;
+}
+
+.hero h1 {
+    font-size: clamp(75px, 13vw, 145px);
+    letter-spacing: -4px;
+    color: #fff7f9;
+}
+
+em {
+    font-style: italic;
+    color: #f5a5ba;
+}
+
+
+/* =========================================================
+   SUBTITLE HERO
+========================================================= */
+
+.hero-sub {
+    max-width: 540px;
+
+    margin: 28px auto 0;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    font-weight: 300;
+
+    color: #ffe9ef;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.primary-btn,
+.outline-btn {
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    margin-top: 34px;
+
+    padding: 15px 26px;
+
+    border: 0;
+
+    background: #fff5f7;
+
+    color: var(--wine);
+
+    font-weight: 600;
+
+    box-shadow:
+        0 15px 35px rgba(82, 20, 39, 0.2);
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 20px 40px rgba(82, 20, 39, 0.3);
+}
+
+.primary-btn span {
+    margin-left: 8px;
+    color: var(--rose);
+}
+
+
+/* =========================================================
+   SCROLL HINT
+========================================================= */
+
+.scroll-hint {
+    margin-top: 65px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #ffe2ea;
+
+    opacity: 0.8;
+}
+
+.scroll-hint span {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 18px;
+
+    animation: down 1.4s infinite;
+}
+
+@keyframes down {
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+section {
+    padding: 120px 7vw;
+    background: var(--bg);
+}
+
+
+/* =========================================================
+   SECTION TAG
+========================================================= */
+
+.section-tag {
+    margin-bottom: 55px;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    color: #f5afc0;
+}
+
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.letter {
+    background: var(--bg);
+}
+
+.letter-wrap {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 65px 7vw;
+
+    background:
+        rgba(255, 248, 250, 0.95);
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    box-shadow:
+        0 25px 70px rgba(91, 25, 45, 0.18);
+
+    position: relative;
+}
+
+
+/* =========================================================
+   LETTER DECORATION
+========================================================= */
+
+.letter-decoration {
+    position: absolute;
+
+    top: 22px;
+    right: 35px;
+
+    font-family: serif;
+
+    font-size: 48px;
+
+    color: #efa4b9;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eyebrow {
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    color: var(--rose);
+}
+
+
+/* =========================================================
+   JUDUL SURAT
+========================================================= */
+
+.letter h2,
+.moments h2 {
+    margin: 15px 0 25px;
+
+    font-size: clamp(50px, 7vw, 82px);
+
+    color: var(--wine);
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider {
+    width: 55px;
+    height: 2px;
+
+    margin-bottom: 28px;
+
+    background: var(--rose);
+}
+
+
+/* =========================================================
+   TEKS SURAT
+========================================================= */
+
+.letter-text {
+    min-height: 230px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 23px;
+
+    line-height: 1.65;
+
+    color: #663043;
+
+    white-space: pre-line;
+}
+
+
+/* =========================================================
+   CURSOR
+========================================================= */
+
+.letter-text.typing::after {
+    content: "|";
+
+    color: var(--rose);
+
+    animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.signature {
+    margin-top: 25px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    color: var(--rose);
+
+    opacity: 0;
+
+    transform: translateY(8px);
+
+    transition: 1s;
+}
+
+.signature.show {
+    opacity: 1;
+    transform: none;
+}
+
+
+/* =========================================================
+   OUR MOMENTS
+========================================================= */
+
+.moments {
+    background: var(--bg);
+}
+
+.moments-grid {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   QUOTE CARD
+========================================================= */
+
+.quote-card {
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #a92d50,
+            #c23f62
+        );
+
+    color: #fff;
+
+    box-shadow:
+        0 25px 55px rgba(91, 20, 42, 0.25);
+
+    position: relative;
+}
+
+.quote-card p {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 27px;
+
+    line-height: 1.45;
+}
+
+.quote-mark {
+    font-family: Georgia, serif;
+
+    font-size: 75px;
+
+    line-height: 0.5;
+
+    color: #f4a9bc;
+}
+
+.quote-heart {
+    display: block;
+
+    margin-top: 25px;
+
+    text-align: right;
+
+    color: #f5afc0;
+}
+
+
+/* =========================================================
+   MINI GRID
+========================================================= */
+
+.mini-grid {
+    max-width: 1050px;
+
+    margin: 65px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.mini-grid article {
+    padding: 30px;
+
+    background:
+        rgba(255, 245, 248, 0.94);
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+
+    box-shadow:
+        0 10px 30px rgba(91, 25, 45, 0.08);
+}
+
+.mini-grid span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--rose);
+}
+
+.mini-grid h3 {
+    margin: 15px 0 8px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+
+    color: var(--wine);
+}
+
+.mini-grid p {
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: #805061;
+}
+
+
+/* =========================================================
+   PHOTO SECTION
+========================================================= */
+
+.photo-section {
+    background: var(--bg);
+}
+
+
+/* =========================================================
+   PHOTO FRAME
+========================================================= */
+
+.photo-frame {
+    width: min(100%, 560px);
+
+    margin: 0 auto;
+
+    padding: 12px;
+
+    background: rgba(255, 248, 250, 0.96);
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        0 30px 70px rgba(91, 25, 45, 0.22);
+
+    position: relative;
+}
+
+
+/* =========================================================
+   PHOTO CONTAINER
+========================================================= */
+
+.photo-placeholder {
+    width: 100%;
+
+    height: 580px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d46b87,
+            #a93658
+        );
+}
+
+
+/* =========================================================
+   FOTO
+========================================================= */
+
+.photo-placeholder img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+
+/* =========================================================
+   EFEK HALUS PADA FOTO
+========================================================= */
+
+.photo-placeholder::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.05),
+            transparent 25%,
+            transparent 75%,
+            rgba(116, 25, 54, 0.12)
+        );
+}
+
+
+/* =========================================================
+   HOVER FOTO
+========================================================= */
+
+.photo-frame:hover .photo-placeholder img {
+    transform: scale(1.02);
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final {
+    min-height: 80vh;
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #d18499,
+            #c3748d 55%,
+            #b4667f 100%
+        );
+
+    color: #fff;
+}
+
+.final-inner {
+    max-width: 650px;
+}
+
+.final-heart {
+    font-size: 80px;
+
+    color: #f5a5ba;
+
+    animation: pulse 1.7s infinite;
+}
+
+.final h2 {
+    margin: 25px 0;
+
+    font-size: clamp(58px, 8vw, 95px);
+
+    color: #fff5f7;
+}
+
+.final p:not(.eyebrow) {
+    max-width: 450px;
+
+    margin: auto;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #ffe8ef;
+}
+
+
+/* =========================================================
+   OUTLINE BUTTON
+========================================================= */
+
+.outline-btn {
+    margin-top: 35px;
+
+    padding: 13px 24px;
+
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    color: #fff;
+}
+
+.outline-btn:hover {
+    background: #fff;
+
+    color: var(--wine);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 24px;
+
+    text-align: center;
+
+    background: #a95b73;
+
+    color: #fbdce5;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+footer span {
+    color: #fff;
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+    section {
+        padding: 85px 20px;
+    }
+
+    .moments-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .mini-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .letter-wrap {
+        padding: 45px 25px;
+    }
+
+    .letter-text {
+        font-size: 20px;
+    }
+
+    /* FOTO TABLET */
+
+    .photo-frame {
+        width: 100%;
+        max-width: 500px;
+        padding: 8px;
+    }
+
+    .photo-placeholder {
+        height: 620px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .music-btn {
+        top: 15px;
+        right: 15px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — HP KECIL
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .hero-card {
+        padding: 40px 12px;
+    }
+
+    .tiny-label {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero-sub {
+        font-size: 13px;
+    }
+
+    .section-tag {
+        margin-bottom: 35px;
+    }
+
+    .letter-decoration {
+        right: 18px;
+    }
+
+    .quote-card p {
+        font-size: 23px;
+    }
+
+    /* FOTO HP */
+
+    .photo-frame {
+        width: 100%;
+        padding: 7px;
+    }
+
+    .photo-placeholder {
+        height: 520px;
+    }
+}

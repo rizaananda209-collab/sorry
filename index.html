@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Untuk Kamu ❤️</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="ambient ambient-1"></div>
+  <div class="ambient ambient-2"></div>
+
+  <!-- HATI MELAYANG -->
+  <div id="particles"></div>
+
+
+  <!-- =====================================================
+       TOMBOL MUSIK
+  ====================================================== -->
+
+  <button
+    class="music-btn"
+    id="musicBtn"
+    aria-label="Putar musik">
+    ♫
+  </button>
+
+
+  <!-- =====================================================
+       FILE MUSIK
+       
+       GANTI "lagu.mp3" DENGAN NAMA FILE LAGU KAMU
+  ====================================================== -->
+
+  <audio id="bgMusic" loop>
+    <source src="lagu/Magnolia Celebration - Magnolia (Lyrics) - (320 Kbps).mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+
+  <main>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero">
+
+      <div class="hero-card">
+
+        <div class="tiny-label">
+          SOMETHING SMALL FOR YOU, MY LOVE
+        </div>
+
+        <div class="hero-heart">
+          ♥
+        </div>
+
+        <h1>
+          Untuk<br>
+          <em>Kamu</em><br>
+          Sayang
+        </h1>
+
+        <p class="hero-sub">
+          Sebuah halaman kecil untuk seseorang yang berhasil
+          membuat hari biasa terasa sedikit lebih istimewa.
+        </p>
+
+        <button class="primary-btn" id="openBtn">
+          Buka Pesannya
+          <span>♥</span>
+        </button>
+
+        <div class="scroll-hint">
+          scroll perlahan
+          <span>↓</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LETTER
+    ====================================================== -->
+
+    <section class="letter reveal" id="letter">
+
+      <div class="section-tag">
+        01 — A LETTER
+      </div>
+
+
+      <div class="letter-wrap">
+
+        <div class="letter-decoration">
+          ♡
+        </div>
+
+        <p class="eyebrow">
+          Untuk seseorang yang spesial
+        </p>
+
+        <h2>
+          Aku ingin<br>
+          <em>mengatakan sesuatu.</em>
+        </h2>
+
+        <div class="divider"></div>
+
+        <p id="typedText" class="letter-text"></p>
+
+        <p id="signature" class="signature">
+          — dari seseorang yang sangat menyayangimu ♥
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LITTLE THINGS
+    ====================================================== -->
+
+    <section class="moments reveal">
+
+      <div class="section-tag">
+        02 — LITTLE THINGS
+      </div>
+
+
+      <div class="moments-grid">
+
+        <div>
+
+          <p class="eyebrow">
+            Hal-hal kecil
+          </p>
+
+          <h2>
+            Yang membuat<br>
+            <em>kamu berbeda.</em>
+          </h2>
+
+        </div>
+
+
+        <div class="quote-card">
+
+          <span class="quote-mark">
+            “
+          </span>
+
+          <p>
+            Terkadang seseorang tidak perlu melakukan sesuatu
+            yang besar. Cukup hadir, lalu entah kenapa suasana
+            menjadi lebih hangat dan bahagia.
+          </p>
+
+          <span class="quote-heart">
+            ♥
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="mini-grid">
+
+        <article>
+
+          <span>01</span>
+
+          <h3>
+            Senyummu Dan Tawamu
+          </h3>
+
+          <p>
+            Hal sederhana yang bisa mengubah suasana.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <span>02</span>
+
+          <h3>
+            Kehadiranmu
+          </h3>
+
+          <p>
+            Tidak banyak yang perlu dilakukan untuk menjadi berarti.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <span>03</span>
+
+          <h3>
+            Cerita kita
+          </h3>
+
+          <p>
+            Biarkan waktu menulis bagian berikutnya.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOTO KITA
+    ====================================================== -->
+
+    <section class="photo-section reveal">
+
+      <div class="section-tag">
+        03 — OUR MOMENT
+      </div>
+
+
+      <div class="photo-frame">
+
+        <div class="photo-placeholder">
+
+          <img src="foto/lucu.jpeg">
+
+        </div>
+
+      </div>
+      <center><p>foto lucu</p></center>
+    </section>
+
+
+
+    <!-- =====================================================
+         FINAL
+    ====================================================== -->
+
+    <section class="final reveal">
+
+      <div class="final-inner">
+
+        <div class="final-heart">
+          ♥
+        </div>
+
+        <p class="eyebrow">
+          And one last thing...
+        </p>
+
+        <h2>
+          Semoga kamu<br>
+          <em>selalu bersamaku sampai kapan pun.</em>
+        </h2>
+
+        <p>
+          Karena melihatmu tersenyum adalah salah satu
+          hal kecil yang membutku ikut tersenyum bahagia.
+        </p>
+        <br>
+        <p>
+            For Your Man💐💝
+        </p>
+
+        <button class="outline-btn" id="againBtn">
+          Kembali ke awal ↑
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer>
+    made with
+    <span>♥</span>
+    for someone special
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
